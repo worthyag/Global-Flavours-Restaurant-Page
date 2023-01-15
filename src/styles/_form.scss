@@ -1,0 +1,44 @@
+section.form {
+   .container {
+        @include flex(column, center, center);
+        height: 60vh;
+
+        h2 {
+            font-size: 2.4em;
+            margin-bottom: 32px;
+        }
+
+        form {
+            @include flex(column, center, flex-start, 28px);
+
+            label {
+                font-weight: 600;
+                margin-right: 16px;
+            }
+
+            input {
+                height: 30px;
+                width: 300px;
+            }
+            input[type=submit] {
+                width: 100%;
+                height: auto;
+                background-color: $primary-colour;
+                color: $primary-background;
+                border: none;
+
+                font-size: 20px;
+                font-weight: 600;
+                padding: 8px 16px;
+                border-radius: 4px;
+
+                margin-top: 20px;
+
+                &:hover {
+                    background-color: $primary-colour-light;
+                    cursor: pointer;
+                }
+            }
+        }
+   }
+}

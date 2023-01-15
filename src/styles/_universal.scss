@@ -1,0 +1,37 @@
+// Universal
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: $primary-text;
+    background-color: $primary-background;
+    font-family: $font-main;
+}
+
+// Functions
+@mixin container($mx, $my) {
+    margin: $my $mx;
+}
+
+@mixin flex($direction, $justify-content, $align-items, $gap: unset) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+
+    @if $gap != unset {
+        gap: $gap;
+    }
+}
+
+// Global / Elements
+.container {
+    @include container($container-margin, 20px);
+}
+
+a {
+    text-decoration: none;
+    color: $primary-text;
+}

@@ -1,0 +1,29 @@
+section.contact-us {
+    background-color: $primary-colour;
+    color: $primary-background;
+    text-align: center;
+    padding: 20px;
+
+    .group {
+        @include flex(row, center, center, 12px);
+
+        .group-heading {
+            font-weight: 600;
+
+            &::after {
+                content: " ~ ";
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+section.socials {
+    text-align: center;
+    padding: 20px;
+
+    img {
+        height: 20px;
+        padding: 0 16px;
+    }
+}

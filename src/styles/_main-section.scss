@@ -1,0 +1,104 @@
+main {
+    .container .boxes {
+        @include flex(row, center, center, 12px);
+        flex-wrap: wrap;
+
+        div.box:nth-child(1){
+            flex-basis: 18%;
+        }
+
+        div.box {
+            flex: 1;
+            flex-basis: 32%;
+            height: 300px;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+
+            .description {
+                visibility: hidden;
+                position: absolute;
+                height: 300px;
+                border-radius: 8px;
+
+                opacity: 0;
+                margin-top: 0;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: $primary-colour;
+                color: $primary-background;
+
+                text-align: center;
+                vertical-align: center;
+
+                // transition effect
+                transition: opacity .2s, visibility .2s;
+
+                img {
+                    height: 50px;
+                    width: 50px;
+                    padding-top: 50px;
+                }
+
+                p {
+                    padding: 50px;
+                    padding-top: 0;
+                }
+            }
+
+            &:hover .description {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+main#menu {
+    .container .boxes {
+        div.box:nth-child(5n) {
+            flex-basis: 40%;
+        }
+
+        div.box {
+            flex-basis: 20%;
+            height: 250px;
+
+            .description {
+                height: 250px;
+                border-radius: 8px;
+                overflow-y: scroll;
+
+                img {
+                    height: 30px;
+                    width: 30px;
+                    padding-top: 20px;
+                }
+
+                p {
+                    padding: 8px 16px;
+                    padding-top: 0;
+                }
+
+                p.heading {
+                    font-size: 1.3em;
+                    font-weight: 600;
+                }
+
+                span {
+                    background-color: $primary-background;
+                    color: $primary-text;
+                    padding: 8px;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+}

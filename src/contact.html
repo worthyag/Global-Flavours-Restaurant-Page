@@ -1,0 +1,88 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %> | Contact</title>
+    <link rel="shortcut icon" class="logo-img" src="./logo.svg" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="title">
+          <div class="branding">
+            <img class="logo-img" alt="Logo" />
+            <h1><%= htmlWebpackPlugin.options.title %></h1>
+          </div>
+          <p>Taste the flavours of the world.</p>
+        </div>
+        <nav>
+          <a href="./index.html"><button>Home</button></a>
+          <a href="./menu.html"><button>Menu</button></a>
+          <a href="#" class="current"><button>Contact</button></a>
+        </nav>
+      </div>
+    </header>
+    <section class="form">
+      <div class="container">
+        <h2>Become a Member</h2>
+        <form action="#">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="dob">Birthday</label>
+            <input type="date" id="dob" />
+          </div>
+          <input type="submit" />
+        </form>
+      </div>
+    </section>
+    <section class="contact-us">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="group">
+          <p class="group-heading">Email</p>
+          <p>eat@globalflavour.com</p>
+        </div>
+        <div class="group">
+          <p class="group-heading">Address</p>
+          <p>123 New Court Lane, Dawn, London N11HJ</p>
+        </div>
+      </div>
+    </section>
+    <section class="socials">
+      <div class="container">
+        <h2>Socials</h2>
+        <a href="#"
+          ><img id="instagram" src="./instagram-icon.svg" alt="Instagram Logo"
+        /></a>
+        <a href="#"
+          ><img id="twitter" src="./twitter-icon.svg" alt="Twitter Logo"
+        /></a>
+        <a href="#"
+          ><img id="youtube" src="./youtube-icon.svg" alt="YouTube Logo"
+        /></a>
+        <a href=""
+          ><img id="facebook" src="./facebook-icon.svg" alt="Facebook Logo"
+        /></a>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>
+          Copyright © 2022 by
+          <a href="https://github.com/worthyag" target="_blank"
+            >Worthy
+            <img class="github" src="./github-icon.svg" alt="Github icon"
+          /></a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

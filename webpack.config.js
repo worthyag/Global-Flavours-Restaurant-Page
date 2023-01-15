@@ -4,7 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: "development",
     entry: {
-        bundle: path.resolve(__dirname, 'src/index.js')
+        index: path.resolve(__dirname, 'src/index.js'),
+        menu: path.resolve(__dirname, 'src/menu.js'),
+        contact: path.resolve(__dirname, 'src/contact.js')
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -38,7 +40,26 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Global Flavour',
             filename: 'index.html',
-            template: './src/template.html'
+            template: './src/about.html',
+            inject: true,
+            chunks: ['index']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Global Flavour',
+            filename: 'menu.html',
+            template: './src/menu.html',
+            inject: true,
+            chunks: ['menu']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Global Flavour',
+            filename: 'contact.html',
+            template: './src/contact.html',
+            inject: true,
+            chunks: ['contact']
         })
-    ]
+    ],
+    stats: {
+        children: true
+    }
 }

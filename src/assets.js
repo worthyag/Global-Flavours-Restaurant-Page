@@ -32,6 +32,10 @@ import ytIcon from './assets/youtube-icon.svg';
 import fbIcon from './assets/facebook-icon.svg';
 import githubIcon from './assets/github-icon.svg';
 
+function addSrc(element, src) {
+    element.src = src;
+}
+
 
 function generateAssets() {
     // Logos
@@ -48,22 +52,42 @@ function generateAssets() {
     }
 
     // Boxes
-    const box1Img = document.getElementById('box-1');
-    box1Img.src = box1;
-    const box2Img = document.getElementById('box-2');
-    box2Img.src = box2;
-    const box3Img = document.getElementById('box-3');
-    box3Img.src = box3;
-    const box4Img = document.getElementById('box-4');
-    box4Img.src = box4;
-    const box5Img = document.getElementById('box-5');
-    box5Img.src = box5;
-    const box6Img = document.getElementById('box-6');
-    box6Img.src = box6;
+    addSrc(document.getElementById('box-1'), box1);
+    addSrc(document.getElementById('box-2'), box2);
+    addSrc(document.getElementById('box-3'), box3);
+    addSrc(document.getElementById('box-4'), box4);
+    addSrc(document.getElementById('box-5'), box5);
+    addSrc(document.getElementById('box-6'), box6);
+
+    // Menu Items
+    addSrc(document.getElementById('menu-1'), menu1);
+    addSrc(document.getElementById('menu-2'), menu2);
+    addSrc(document.getElementById('menu-3'), menu3);
+    addSrc(document.getElementById('menu-4'), menu4);
+    addSrc(document.getElementById('menu-5'), menu5);
+    addSrc(document.getElementById('menu-6'), menu6);
+    addSrc(document.getElementById('menu-7'), menu7);
+    addSrc(document.getElementById('menu-8'), menu8);
+    addSrc(document.getElementById('menu-9'), menu9);
+    addSrc(document.getElementById('menu-10'), menu10);
+    addSrc(document.getElementById('menu-11'), menu11);
+    addSrc(document.getElementById('menu-12'), menu12);
+    addSrc(document.getElementById('menu-13'), menu13);
+    addSrc(document.getElementById('menu-14'), menu14);
+    addSrc(document.getElementById('menu-15'), menu15);
+    addSrc(document.getElementById('menu-16'), menu16);
 
     // Icons
-    const githubImg = document.getElementById('github');
-    githubImg.src = githubIcon;
+    addSrc(document.getElementById('instagram'), instagramIcon);
+    addSrc(document.getElementById('twitter'), twitterIcon);
+    addSrc(document.getElementById('youtube'), ytIcon);
+    addSrc(document.getElementById('facebook'), fbIcon);
+
+    
+
+    for (let img of document.querySelectorAll('.github')) {
+        img.src = githubIcon;
+    }
 }
 
 export default generateAssets;
